@@ -1,5 +1,6 @@
 package com.sylla.hostopharma.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -12,6 +13,15 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
 @Entity
-@Table(name = "lignevente")
-public class LigneVente extends AbstractEntity {
+@Table(name = "client")
+public class Patient extends AbstractEntity{
+    private String nom;
+    private String prenom;
+
+    //private Adresse adresse
+    @Column
+    private String photo ;
+    private String mail;
+    private String numTel;
+
 }
